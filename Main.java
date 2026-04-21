@@ -1,16 +1,27 @@
-package oop7;
+package oop5;
 
 public class Main {
-	  public static void main(String[] args) {
-	        OnlineCourse c1 = new OnlineCourse("GEN", 3, "Google Meet");
-	        OnsiteCourse c2 = new OnsiteCourse("OOP", 5, "C-001");
+	public static void main(String[] args) {
 
-	        c1.increaseCredit(1);
-	        c1.changePlatform("Zoom");
-	        c2.changeClassroom("C-002");
+		Student[] list = { new Student("John", 45, 60), 
+				new Student("Jane", 85, 90)
+				, new Student("Joe", 30, 40) };
 
-	        System.out.println("Course List:\n");
-	        c1.displayInfo();
-	        c2.displayInfo();
-	    }
+		Class myClass = new Class(list);
+		
+
+		myClass.printClassReport();
+
+		myClass.addBonus(5);
+		myClass.addBonus(15);
+
+
+		System.out.println("Güncelleme Sonrası:");
+		System.out.println();
+		
+		
+		myClass.printClassReport();
+
+	}
+
 }
